@@ -1,4 +1,4 @@
-package com.example.Board;
+package com.example.board;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.example.Board.domain.Board;
-import com.example.Board.domain.Member;
-import com.example.Board.domain.Role;
-import com.example.Board.persistence.BoardRepository;
-import com.example.Board.persistence.MemberRepository;;
+import com.example.board.domain.Board;
+import com.example.board.domain.Member;
+import com.example.board.domain.Role;
+import com.example.board.persistence.BoardRepository;
+import com.example.board.persistence.MemberRepository;;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest

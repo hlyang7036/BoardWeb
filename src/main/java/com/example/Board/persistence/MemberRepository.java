@@ -1,8 +1,8 @@
-package com.example.Board.persistence;
+package com.example.board.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.Board.domain.Member;
+import com.example.board.domain.Member;
 
 public interface MemberRepository extends JpaRepository<Member, String> {
 

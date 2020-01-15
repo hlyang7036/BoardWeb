@@ -1,11 +1,11 @@
-package com.example.Board.persistence;
+package com.example.board.persistence;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.example.Board.domain.Board;
+import com.example.board.domain.Board;
 
 public interface BoardRepository extends JpaRepository<Board, Long> {
 

@@ -1,4 +1,4 @@
-package com.example.Board.domain;
+package com.example.board.domain;
 
 
 public enum Role {
