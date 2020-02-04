@@ -6,12 +6,10 @@
 </head>
 <body th:align="center">
 <h1>게시글 상세</h1>
-<!-- <form action="@{/board/updateBoard}" method="post"> -->
 	<table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0">
 		<tr>
 			<td bgcolor="gray" th:text="제목" width="80"></td>
-			<td><input name="seq" type="hidden" th:value="${board.seq}">
-				<input name="title" type="text" th:value="${board.title}"></td>
+			<td th:text="${board.title}"><input name="seq" type="hidden" th:value="${board.seq}"></td>
 		</tr>
 		<tr>
 			<td bgcolor="gray" th:text="작성자"></td>
@@ -29,11 +27,7 @@
 			<td bgcolor="gray" th:text="조회수"></td>
 			<td th:text="${board.cnt}"></td>	
 		</tr>
-<!-- 		<tr> -->
-<!-- 			<td colspan="2" align="center"><input type="submit" value="게시글 수정"></td> -->
-<!-- 		</tr> -->
 	</table>
-<!-- </form>	 -->
 <a th:href="@{/board/updateBoard(seq=${board.seq})}">글수정</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a th:href="@{/board/deleteBoard(seq=${board.seq})}">글삭제</a>&nbsp;&nbsp;&nbsp;&nbsp;	
 <a th:href="@{/board/getBoardList}">글목록</a>	
