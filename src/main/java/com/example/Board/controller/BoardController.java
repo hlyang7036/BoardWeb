@@ -39,6 +39,12 @@ public class BoardController {
 		return "board/updateBoard";
 	}
 	
+	@PostMapping("/updateBoard")
+	public String updateBoard(Board board) {
+		boardService.updateBoard(board);
+		return "forward:getBoardList";
+	}
+	
 	@GetMapping("/insertBoard")
 	public String insertBoard() {
 		return "board/insertBoard";
@@ -49,5 +55,11 @@ public class BoardController {
 	public String insetBoard(Board board) {
 		boardService.insertBoard(board);
 		return "redirect:getBoardList";
+	}
+	
+	@GetMapping("/deleteBoard")
+	public String deleteBoard(Board board) {
+		boardService.deleteBoard(board);
+		return "forward:getBoardList";
 	}
 }
