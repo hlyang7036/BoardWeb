@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.example.board.domain.Board;
@@ -21,6 +22,9 @@ public class BoardRepositoryTest {
 	
 	@Autowired
 	private BoardRepository boardRepo;
+	
+	@Autowired
+	private PasswordEncoder encoder;
 	
 //	@Test
 //	public void testGetBoardList() {
@@ -81,6 +85,26 @@ public class BoardRepositoryTest {
 //			board.setContent(member2.getName() + " 가 등록한 게시글 내용 " + i);
 //			boardRepo.save(board);
 //		}
+//	}
+	
+//	@Test
+//	public void name() {
+//		Member member1 = new Member();
+//		member1.setId("member");
+//		member1.setPassword(encoder.encode("member123"));
+//		member1.setName("곽달호");
+//		member1.setRole(Role.ROLE_MEMBER);
+//		member1.setEnabled(true);
+//		memberRepo.save(member1);
+//		
+//		Member member2 = new Member();
+//		member2.setId("admin");
+//		member2.setPassword(encoder.encode("admin123"));
+//		member2.setName("안문호");
+//		member2.setRole(Role.ROLE_ADMIN);
+//		member2.setEnabled(true);
+//		memberRepo.save(member2);
+//		
 //	}
 	
 }

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 	<title>새 글 등록</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body th:align="center">
 <h1>게시글 등록</h1>
-<form action="@{/board/insertBoard}" method="post">
+<form th:action="@{/board/insertBoard}" method="post">
 	<table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0">
 		<tr>
 			<td bgcolor="gray" th:text="제목" width="80"></td>
@@ -14,7 +15,7 @@
 		</tr>
 		<tr>
 			<td bgcolor="gray" th:text="작성자"></td>
-			<td><input name="writer" type="text" size="10"></td>
+			<td><span sec:authentication="principal.member.name"></span></td>
 		</tr>
 		<tr>
 			<td bgcolor="gray" th:text="내용"></td>
