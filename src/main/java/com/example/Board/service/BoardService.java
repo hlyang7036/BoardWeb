@@ -3,6 +3,7 @@ package com.example.board.service;
 import org.springframework.data.domain.Page;
 
 import com.example.board.domain.Board;
+import com.example.board.domain.Search;
 
 public interface BoardService {
 	
@@ -14,5 +15,5 @@ public interface BoardService {
 	
 	Board getBoard(Board board);
 	
-	Page<Board> getBoardList(Board board);
+	Page<Board> getBoardList(Search search);
 }
